@@ -8,10 +8,9 @@
  * @Param {boolean}   shouldRender - boolean logic to display which Component
  */
 
-import React from 'react';
 import T from 'prop-types';
 
-const ConditionalRender = ({
+const ConditionalRender: React.FC<ConditionalRenderProps> = ({
   Component,
   FallbackComponent,
   propsToPassDown,
@@ -26,11 +25,18 @@ const ConditionalRender = ({
   }
 };
 
-ConditionalRender.propTypes = {
-  Component: T.func.isRequired,
-  FallbackComponent: T.func,
-  propsToPassDown: T.object,
-  shouldRender: T.bool.isRequired,
-};
+// ConditionalRender.propTypes = {
+//   Component: T.func.isRequired,
+//   FallbackComponent: T.func,
+//   propsToPassDown: T.object,
+//   shouldRender: T.bool.isRequired,
+// };
 
 export default ConditionalRender;
+
+interface ConditionalRenderProps {
+  Component: React.ComponentType<any>,
+  FallbackComponent?: React.ComponentType<any> | null,
+  propsToPassDown?: object,
+  shouldRender: boolean,
+}

@@ -1,7 +1,13 @@
-import UtilityBar from '../UtilityBar';
 import Navbar from '../Navbar';
+import SearchBar from '../SearchBar';
+import UtilityBar from '../UtilityBar';
 
-import { HeaderContainer, NavbarContainer } from './styledComponents';
+import {
+  HeaderContainer,
+  MobileSearchButton,
+  MobileSearchContainer,
+  NavbarContainer,
+} from './styledComponents';
 
 const HeaderComponent: React.FC = () => {
 
@@ -11,6 +17,11 @@ const HeaderComponent: React.FC = () => {
       <NavbarContainer>
         <Navbar />
       </NavbarContainer>
+      <MobileSearchContainer>
+        <MobileSearchButton>
+          <SearchBar value="" />
+        </MobileSearchButton>
+      </MobileSearchContainer>
     </HeaderContainer>
   )
 }

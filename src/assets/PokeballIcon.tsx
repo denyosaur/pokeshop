@@ -7,8 +7,8 @@ const PokeballIcon: React.FC = (props) => (
     id="Pok\xE9ball"
     x={0}
     y={0}
-    height="44px"
-    width="44px"
+    height="40px"
+    width="40px"
     enableBackground="new 0 0 595.3 594.1"
     viewBox="0 0 595.3 594.1"
     {...props}
